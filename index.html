@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الأطيبان لتمور الوادي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>شركة الأطيبان لتمور الوادي</h1>
+        
+        <div id="clock" class="digital-clock"></div>
+        <div id="date" class="digital-clock"></div>
+
+        <section class="inventory">
+            <h2>إدارة الأصناف</h2>
+            <input type="number" id="total-items" placeholder="عدد الأصناف الحالية">
+            <input type="number" id="sold-items" placeholder="عدد الأصناف المباعة">
+            <button onclick="calculateRemaining()">حساب الأصناف المتبقية</button>
+            <p id="remaining-items"></p>
+
+            <input type="number" id="item-quantity" placeholder="كمية الصنف">
+            <input type="number" id="item-price" placeholder="سعر الصنف">
+            <button onclick="calculateTotal()">حساب السعر الإجمالي</button>
+            <p id="total-price"></p>
+        </section>
+
+        <section class="employees">
+            <h2>إدارة الموظفين</h2>
+            <input type="text" id="employee-name" placeholder="اسم الموظف">
+            <input type="text" id="employee-address" placeholder="عنوان الموظف">
+            <input type="text" id="employee-phone" placeholder="رقم الهاتف">
+            <button onclick="addEmployee()">إضافة موظف</button>
+            <button onclick="markAttendance()">تسجيل حضور</button>
+            <button onclick="markAbsence()">تسجيل غياب</button>
+            <ul id="employee-list"></ul>
+            <p id="attendance-summary"></p>
+        </section>
+
+        <button onclick="printReport()">طباعة التقرير</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
